@@ -1,0 +1,16 @@
+[
+{
+  "modid": "consolidatedores",
+  "name": "ConsolidatedORES",
+  "description": "A library of universal ores, ingots and alike that forked 1.7.10 uses",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://thorfusion.com",
+  "updateUrl": "",
+  "authorList": ["Maggi373"],
+  "credits": "Maggi373",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
