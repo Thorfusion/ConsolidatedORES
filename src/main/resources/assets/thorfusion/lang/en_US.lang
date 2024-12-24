@@ -1,3 +1,28 @@
-tile.DeepslateOreBlock.orePoorCopper.name=Deepslate Copper Ore
+tile.DeepslateOreBlock.orePoorCopper.name=Poor Deepslate Copper Ore
+tile.DeepslateOreBlock.orePoorGold.name=Poor Deepslate Gold Ore
+tile.DeepslateOreBlock.orePoorIron.name=Poor Deepslate Iron Ore
+tile.DeepslateOreBlock.orePoorLead.name=Poor Deepslate Lead Ore
+tile.DeepslateOreBlock.orePoorTin.name=Poor Deepslate Tin Ore
+tile.DeepslateOreBlock.orePoorOsmium.name=Poor Deepslate Osmium Ore
+tile.DeepslateOreBlock.orePoorSilver.name=Poor Deepslate Silver Ore
+
+tile.OreBlock.orePoorCopper.name=Poor Copper Ore
+tile.OreBlock.orePoorGold.name=Poor Gold Ore
+tile.OreBlock.orePoorIron.name=Poor Iron Ore
+tile.OreBlock.orePoorLead.name=Poor Lead Ore
+tile.OreBlock.orePoorTin.name=Poor Tin Ore
+tile.OreBlock.orePoorOsmium.name=Poor Osmium Ore
+tile.OreBlock.orePoorSilver.name=Poor Silver Ore
+
+item.RawPoorCopper.name=Raw Poor Copper
+item.RawPoorGold.name=Raw Poor Gold
+item.RawPoorIron.name=Raw Poor Iron
+item.RawPoorLead.name=Raw Poor Lead
+item.RawPoorTin.name=Raw Poor Tin
+item.RawPoorOsmium.name=Raw Poor Osmium
+item.RawPoorSilver.name=Raw Poor Silver
+
+
+
 
 itemGroup.tabConsolidatedORES=ConsolidatedORES

@@ -15,7 +15,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-@Mod(modid = com.thorfusion.consolidatedores.ConsolidatedORES.MODID, name = com.thorfusion.consolidatedores.ConsolidatedORES.NAME, version = com.thorfusion.consolidatedores.ConsolidatedORES.VERSION, dependencies = "before:aobd;after:MineTweaker3")
+@Mod(modid = com.thorfusion.consolidatedores.ConsolidatedORES.MODID, name = com.thorfusion.consolidatedores.ConsolidatedORES.NAME, version = com.thorfusion.consolidatedores.ConsolidatedORES.VERSION, dependencies = "before:aobd;after:MineTweaker3;after:etfuturum")
 
 public class ConsolidatedORES {
     public static final String NAME = "ConsolidatedORES";
@@ -43,10 +43,13 @@ public class ConsolidatedORES {
         isThorfusionLoaded = Loader.isModLoaded("thorfusion");
         consolidatedoresConfig.init();
         consolidatedoresBlocks.register();
+        consolidatedoresItems.register();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        consolidatedoresBlocks.registerOreDict();
+        consolidatedoresItems.registerOreDict();
         if (consolidatedoresConfig.EnableCapes & !isThorfusionLoaded) {
             //proxy, tilentity
             if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
