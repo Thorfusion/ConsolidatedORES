@@ -43,13 +43,13 @@ configFile.withReader {
 
 version = "${config.minecraft_version}-${config.mod_version}"
 group = "com.thorfusion.consolidatedores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "consolidatedores"
+archivesBaseName = "ConsolidatedORES"
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    replaceIn "com/thorfusion/consolidatedores/consolidatedores.java"
+    replaceIn "com/thorfusion/consolidatedores/ConsolidatedORES.java"
     replace "GRADLE_MODVERSION", config.mod_version
 }
 
@@ -67,7 +67,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    compile(group: 'mekanism', name: 'Mekanism-Community-Edition', version: '1.7.10-9.10.+', classifier: 'API')
+    implementation "mekanism:Mekanism-Community-Edition:1.7.10-9.10.+:API"
 
 }
 
@@ -91,7 +91,7 @@ processResources
 
             // copy everything else, thats not the mcmod.info
             from(sourceSets.main.resources.srcDirs) {
-                exclude 'mcmod.info', 'Titanpower.java'
+                exclude 'mcmod.info', 'ConsolidatedORES.java'
             }
         }
 
