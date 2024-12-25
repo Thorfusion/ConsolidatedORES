@@ -73,6 +73,7 @@ dependencies {
 
 processResources
         {
+            duplicatesStrategy = 'include'
             // this will ensure that this task is redone when the versions change.
             inputs.property "version", config.mod_version
             inputs.property "mcversion", config.minecraft_version
@@ -84,6 +85,14 @@ processResources
                 // replace version and mcversion
                 expand 'version': config.mod_version, 'mcversion': config.minecraft_version
             }
+            /*
+          from(sourceSets.main.java.com.thorfusion.titanpower.srcDirs) {
+            include 'Titanpower.java'
+
+            // replace version and mcversion
+            expand 'version':config.mod_version
+          }
+          */
             from('src/main') {
                 include '*.info'
                 expand 'version': config.mod_version, 'mc_version': config.minecraft_version, 'fmp_version': config.FMP_version
@@ -91,7 +100,7 @@ processResources
 
             // copy everything else, thats not the mcmod.info
             from(sourceSets.main.resources.srcDirs) {
-                exclude 'mcmod.info', 'ConsolidatedORES.java'
+                exclude 'mcmod.info'
             }
         }
 
