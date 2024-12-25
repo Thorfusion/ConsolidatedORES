@@ -14,6 +14,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 
 @Mod(modid = com.thorfusion.consolidatedores.ConsolidatedORES.MODID, name = com.thorfusion.consolidatedores.ConsolidatedORES.NAME, version = com.thorfusion.consolidatedores.ConsolidatedORES.VERSION, dependencies = "before:aobd;after:MineTweaker3;after:etfuturum")
 
@@ -39,6 +40,8 @@ public class ConsolidatedORES {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        event.getModMetadata().name = EnumChatFormatting.LIGHT_PURPLE + NAME;
+
         isEFRLoaded = Loader.isModLoaded("etfuturum");
         isThorfusionLoaded = Loader.isModLoaded("thorfusion");
         consolidatedoresConfig.init();
@@ -50,6 +53,7 @@ public class ConsolidatedORES {
     public void init(FMLInitializationEvent event) {
         consolidatedoresBlocks.registerOreDict();
         consolidatedoresItems.registerOreDict();
+
         if (consolidatedoresConfig.EnableCapes & !isThorfusionLoaded) {
             //proxy, tilentity
             if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
@@ -64,6 +68,7 @@ public class ConsolidatedORES {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        consolidatedoresRecipes.init();
         if(isEFRLoaded){
             consolidatedoresEFRrecipes.hookEFRRecipes();
             System.out.print("Hooked into EFR api successfully.");

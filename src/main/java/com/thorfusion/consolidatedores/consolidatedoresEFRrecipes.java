@@ -1,7 +1,4 @@
 package com.thorfusion.consolidatedores;
-import net.minecraft.item.ItemStack;
-import com.thorfusion.consolidatedores.consolidatedoresBlocks;
-import com.thorfusion.consolidatedores.consolidatedoresItems;
 import cpw.mods.fml.common.Optional.Method;
 import ganymedes01.etfuturum.api.DeepslateOreRegistry;
 import ganymedes01.etfuturum.api.RawOreRegistry;
