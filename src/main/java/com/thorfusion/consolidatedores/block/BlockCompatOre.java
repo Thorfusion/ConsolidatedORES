@@ -38,6 +38,7 @@ public class BlockCompatOre extends Block
     public void registerBlockIcons(IIconRegister register)
     {
         icons[0] = register.registerIcon("thorfusion:oreDeepslateMinicio");
+        icons[1] = register.registerIcon("thorfusion:oreDeepslateCinnabar");
     }
 
     @Override
@@ -58,5 +59,6 @@ public class BlockCompatOre extends Block
     public void getSubBlocks(Item item, CreativeTabs creativetabs, List list)
     {
         list.add(new ItemStack(item, 1, 0));
+        list.add(new ItemStack(item, 1, 1));
     }
 }

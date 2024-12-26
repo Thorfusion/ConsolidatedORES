@@ -24,6 +24,7 @@ public class ConsolidatedORES {
     public static final String VERSION = "GRADLE_MODVERSION";
 
     public static boolean isEFRLoaded;
+    public static boolean isMagicalCropsLoaded;
     public static boolean isThorfusionLoaded;
 
     public static CreativeTabs tabConsolidatedORES = new CreativeTabs("tabConsolidatedORES") {
@@ -43,6 +44,7 @@ public class ConsolidatedORES {
         event.getModMetadata().name = EnumChatFormatting.LIGHT_PURPLE + NAME;
 
         isEFRLoaded = Loader.isModLoaded("etfuturum");
+        isMagicalCropsLoaded = Loader.isModLoaded("magicalcrops");
         isThorfusionLoaded = Loader.isModLoaded("thorfusion");
         consolidatedoresConfig.init();
         consolidatedoresBlocks.register();

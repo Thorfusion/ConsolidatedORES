@@ -38,6 +38,8 @@ public class consolidatedoresBlocks {
         OreDictionary.registerOre("orePoorSilver", new ItemStack(OreBlockPoorDeepslate, 1, 6));
 
         OreDictionary.registerOre("oreMinicio", new ItemStack(OreBlockCompat, 1, 0));
+        OreDictionary.registerOre("oreCinnabar", new ItemStack(OreBlockCompat, 1, 1));
+        OreDictionary.registerOre("oreDeepslateCinnabar", new ItemStack(OreBlockCompat, 1, 1));
     }
 
 }

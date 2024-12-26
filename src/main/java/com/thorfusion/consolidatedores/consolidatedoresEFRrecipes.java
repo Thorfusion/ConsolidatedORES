@@ -4,6 +4,9 @@ import ganymedes01.etfuturum.api.DeepslateOreRegistry;
 import ganymedes01.etfuturum.api.RawOreRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import com.mark719.magicalcrops.handlers.Essence;
+
+import static com.thorfusion.consolidatedores.ConsolidatedORES.isMagicalCropsLoaded;
 
 public class consolidatedoresEFRrecipes {
     @Method(modid = "etfuturum")
@@ -25,6 +28,11 @@ public class consolidatedoresEFRrecipes {
         RawOreRegistry.addOre("orePoorSilver", consolidatedoresItems.Raw, 6);
 
         DeepslateOreRegistry.addOreByOreDict("oreMinicio", consolidatedoresBlocks.OreBlockCompat, 0);
-    }
+        DeepslateOreRegistry.addOreByOreDict("oreCinnabar", consolidatedoresBlocks.OreBlockCompat, 1);
 
+
+        if(isMagicalCropsLoaded){
+            RawOreRegistry.addOre("oreMinicio", Essence.MinicioEssence);
+        }
+    }
 }

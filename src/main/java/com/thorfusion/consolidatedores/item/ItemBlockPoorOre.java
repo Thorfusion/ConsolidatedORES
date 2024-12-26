@@ -92,6 +92,9 @@ public class ItemBlockPoorOre extends ItemBlock {
             case 14:
                 name = "oreDeepslateMinicio";
                 break;
+            case 15:
+                name = "oreDeepslateCinnabar";
+                break;
             default:
                 name = "Unknown";
                 break;

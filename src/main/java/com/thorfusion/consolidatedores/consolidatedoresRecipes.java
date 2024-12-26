@@ -1,5 +1,7 @@
 package com.thorfusion.consolidatedores;
 
+import mekanism.api.gas.GasRegistry;
+import mekanism.api.gas.GasStack;
 import mekanism.api.recipe.RecipeHelper;
 import mekanism.api.util.StackUtils;
 import net.minecraft.item.ItemStack;
@@ -58,6 +60,10 @@ public class consolidatedoresRecipes {
         RecipeHelper.addEnrichmentChamberRecipe(new ItemStack(consolidatedoresBlocks.OreBlockPoorDeepslate, 2, consolidatedoresTypes.TIN.ordinal()), StackUtils.size(OreDictionary.getOres("ingotTin").get(0), 1));
         RecipeHelper.addEnrichmentChamberRecipe(new ItemStack(consolidatedoresBlocks.OreBlockPoorDeepslate, 2, consolidatedoresTypes.OSMIUM.ordinal()), StackUtils.size(OreDictionary.getOres("ingotOsmium").get(0), 1));
         RecipeHelper.addEnrichmentChamberRecipe(new ItemStack(consolidatedoresBlocks.OreBlockPoorDeepslate, 2, consolidatedoresTypes.SILVER.ordinal()), StackUtils.size(OreDictionary.getOres("ingotSilver").get(0), 1));
+
+        for (ItemStack ore : OreDictionary.getOres("oreCinnabar")) {
+            RecipeHelper.addEnrichmentChamberRecipe(StackUtils.size(ore, 1), StackUtils.size(OreDictionary.getOres("dustCinnabar").get(0), 2));
+        }
 
 
         FurnaceRecipes.smelting().func_151394_a(new ItemStack(consolidatedoresItems.Raw, 1, consolidatedoresTypes.COPPER.ordinal()), StackUtils.size(OreDictionary.getOres("nuggetCopper").get(0), 3), 1.0F);
