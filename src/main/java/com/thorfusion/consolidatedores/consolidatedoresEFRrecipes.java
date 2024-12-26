@@ -2,6 +2,8 @@ package com.thorfusion.consolidatedores;
 import cpw.mods.fml.common.Optional.Method;
 import ganymedes01.etfuturum.api.DeepslateOreRegistry;
 import ganymedes01.etfuturum.api.RawOreRegistry;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class consolidatedoresEFRrecipes {
     @Method(modid = "etfuturum")
@@ -21,6 +23,8 @@ public class consolidatedoresEFRrecipes {
         RawOreRegistry.addOre("orePoorTin", consolidatedoresItems.Raw, 4);
         RawOreRegistry.addOre("orePoorOsmium", consolidatedoresItems.Raw, 5);
         RawOreRegistry.addOre("orePoorSilver", consolidatedoresItems.Raw, 6);
+
+        DeepslateOreRegistry.addOreByOreDict("oreMinicio", consolidatedoresBlocks.OreBlockCompat, 0);
     }
 
 }

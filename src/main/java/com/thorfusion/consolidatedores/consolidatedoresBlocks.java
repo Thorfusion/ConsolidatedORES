@@ -1,5 +1,6 @@
 package com.thorfusion.consolidatedores;
 
+import com.thorfusion.consolidatedores.block.BlockCompatOre;
 import com.thorfusion.consolidatedores.block.BlockPoorOre;
 import com.thorfusion.consolidatedores.item.ItemBlockPoorOre;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -10,11 +11,13 @@ import net.minecraftforge.oredict.OreDictionary;
 public class consolidatedoresBlocks {
     public static final Block OreBlockPoor = new BlockPoorOre("stone").setBlockName("OreBlock");
     public static final Block OreBlockPoorDeepslate = new BlockPoorOre("deepslate").setBlockName("DeepslateOreBlock");
+    public static final Block OreBlockCompat = new BlockCompatOre().setBlockName("DeepslateCompatOreBlock");
 
     public static void register()
     {
         GameRegistry.registerBlock(OreBlockPoor, ItemBlockPoorOre.class, "OreBlock");
         GameRegistry.registerBlock(OreBlockPoorDeepslate, ItemBlockPoorOre.class, "DeepslateOreBlock");
+        GameRegistry.registerBlock(OreBlockCompat, ItemBlockPoorOre.class, "DeepslateCompatOreBlock");
 
     }
     public static void registerOreDict(){
@@ -33,6 +36,8 @@ public class consolidatedoresBlocks {
         OreDictionary.registerOre("orePoorTin", new ItemStack(OreBlockPoorDeepslate, 1, 4));
         OreDictionary.registerOre("orePoorOsmium", new ItemStack(OreBlockPoorDeepslate, 1, 5));
         OreDictionary.registerOre("orePoorSilver", new ItemStack(OreBlockPoorDeepslate, 1, 6));
+
+        OreDictionary.registerOre("oreMinicio", new ItemStack(OreBlockCompat, 1, 0));
     }
 
 }

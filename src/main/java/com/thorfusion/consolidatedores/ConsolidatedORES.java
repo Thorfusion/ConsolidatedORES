@@ -16,7 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
-@Mod(modid = com.thorfusion.consolidatedores.ConsolidatedORES.MODID, name = com.thorfusion.consolidatedores.ConsolidatedORES.NAME, version = com.thorfusion.consolidatedores.ConsolidatedORES.VERSION, dependencies = "before:aobd;after:MineTweaker3;after:etfuturum")
+@Mod(modid = ConsolidatedORES.MODID, name = ConsolidatedORES.NAME, version = ConsolidatedORES.VERSION, dependencies = "before:aobd;after:MineTweaker3;after:etfuturum")
 
 public class ConsolidatedORES {
     public static final String NAME = "ConsolidatedORES";

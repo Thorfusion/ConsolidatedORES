@@ -22,7 +22,7 @@ item.RawPoorTin.name=Raw Poor Tin
 item.RawPoorOsmium.name=Raw Poor Osmium
 item.RawPoorSilver.name=Raw Poor Silver
 
-
+tile.OreBlockCompat.oreDeepslateMinicio.name=Deepslate Minicio Ore
 
 
 itemGroup.tabConsolidatedORES=ConsolidatedORES
