@@ -35,6 +35,7 @@ public class BlockPoorOre extends Block
         super(Material.rock);
         setHardness(type == "deepslate" ? 4.5F :3F);
         setResistance(5F);
+        setHarvestLevel("pickaxe", 1);
         setCreativeTab(ConsolidatedORES.tabConsolidatedORES);
     }
 
